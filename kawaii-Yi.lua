@@ -6,7 +6,7 @@ require "SxOrbWalk"
 
 function OnLoad()
 	SxOrb:LoadToMenu()
-	Config = scriptConfig("kawaii-Yi", "kawaiiYi")
+	Config = scriptConfig("kawaii-Yi", "kawaii-Yi")
 	Config:addParam("KillSteal", "Kill Steal", SCRIPT_PARAM_ONOFF, true)
 	Config:addParam("combo", "Combo", SCRIPT_PARAM_ONKEYDOWN, false, string.byte(" "))
 	ts = TargetSelector(TARGET_LOW_HP_PRIORITY,650)
