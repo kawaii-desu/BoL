@@ -1,5 +1,5 @@
 --[[ AUTO UPDATE - START ]]--
-local version = "0.01"
+local version = "0.02"
 local AUTOUPDATE = true
 local UPDATE_HOST = "raw.githubusercontent.com"
 local UPDATE_PATH = "/kawaii-desu/BoL/master/kawaii-Yi.lua".."?rand="..math.random(1,10000)
