@@ -30,7 +30,6 @@ function OnTick()
 	if (Config.KillSteal) then
 			KillSteal()
 	end
-	KillSteal()
 	if (ts.target ~= nil) then
 		if (Config.combo) then
 
