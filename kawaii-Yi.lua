@@ -37,7 +37,7 @@ require "SxOrbWalk"
 function OnLoad()
 	SxOrb:LoadToMenu()
 	Config = scriptConfig("kawaii-Yi", "kawaiiYi")
-	Config:addParam("killsteal", "Kill Steal", SCRIPT_PARAM_ONOFF, true)
+	Config:addParam("KillSteal", "Kill Steal", SCRIPT_PARAM_ONOFF, true)
 	Config:addParam("combo", "Combo", SCRIPT_PARAM_ONKEYDOWN, false, string.byte(" "))
 	ts = TargetSelector(TARGET_LOW_HP_PRIORITY,650)
 	PrintChat("(^_^) kawaii-Yi loaded")
@@ -57,6 +57,9 @@ end
 
 function OnTick()
 	ts:update()
+	if (Config.KillSteal) then
+			KillSteal()
+	end
 	KillSteal()
 	if (ts.target ~= nil) then
 		if (Config.combo) then
@@ -77,7 +80,5 @@ function OnTick()
 end
 
 	function OnDraw()
-		if (Config.drawCircle) then
-			DrawCircle(myHero.x, myHero.y, myHero.z, 650, 0x111111)
-		end
+	
 	end
