@@ -38,11 +38,11 @@ function OnTick()
 			end
  
 			if (myHero:CanUseSpell(_E) == READY) then
-				CastSpell(_E, ts.target.x,ts.target.z)
+				CastSpell(_E)
 			end
 			
 			if (myHero:CanUseSpell(_R) == READY) then
-				CastSpell(_R, ts.target.x,ts.target.z)
+				CastSpell(_R)
 			end
 		end
 	end
